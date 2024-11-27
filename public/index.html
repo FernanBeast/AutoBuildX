@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Jenkins y Docker</title>
+
+    <style>
+        /* Reset basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and overall container styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Section Styling */
+        .results, .docker-info {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Docker info section styling */
+        .docker-info {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .docker-info p {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bienvenido al Panel de Resultados</h1>
+            <p>Resultados de las pruebas unitarias y despliegue de Docker</p>
+        </header>
+
+        <section class="results">
+            <h2>Resultados de las Pruebas</h2>
+            <table id="test-results">
+                <thead>
+                    <tr>
+                        <th>Prueba</th>
+                        <th>Estado</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los resultados de las pruebas se llenarán aquí con JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="docker-info">
+            <h2>Imagen Docker Construida</h2>
+            <p>La imagen Docker ha sido construida y subida con éxito.</p>
+            <p><strong>Imagen:</strong> <code>dockerhub_usuario/mi-imagen:latest</code></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
