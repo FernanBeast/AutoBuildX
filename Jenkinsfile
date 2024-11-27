@@ -61,10 +61,11 @@ pipeline {
         stage('Iniciar Servidor Node.js') {
             steps {
                 script {
-                    // Iniciar el servidor Node.js para visualizar los resultados en el navegador
+                    // Instalar las dependencias necesarias para el servidor Node.js y arrancar el servidor
                     sh 'npm install'  // Instalar dependencias del servidor Node.js
-                    sh 'node server.js &'
+                    sh 'nohup node server.js &'
                     // El servidor Node.js correrá en el fondo, proporcionando los resultados de las pruebas en http://localhost:3000
+                    echo 'Servidor Node.js iniciado. Acceda a http://localhost:3000 para ver los resultados.'
                 }
             }
         }
@@ -77,4 +78,3 @@ pipeline {
         }
     }
 }
-
