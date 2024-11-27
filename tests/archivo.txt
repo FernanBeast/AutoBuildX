@@ -1,0 +1,8 @@
+// tests/example.test.js
+const assert = require('assert');
+
+describe('Pruebas Unitarias', function() {
+  it('Debería ser verdadero', function() {
+    assert.strictEqual(true, true);
+  });
+});
